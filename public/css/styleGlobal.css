@@ -2,3 +2,34 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+.path {
+    position: relative;
+    overflow: hidden;
+    background-color: #c1c1c1;
+    margin: auto;
+  }
+  .shape {
+    position: relative;
+    left: 0;
+    background-color: red;
+    display: block;
+      top: 0;
+    
+    x-transition: all 5s ease-in-out;
+    animation: ani 5s infinite;
+  }
+  
+  
+  @keyframes ani {
+    0% {
+      left: -30px;
+    }
+    50% {
+      left: 30px;
+    }
+    100% {
+      left: -30px;
+    }
+  }
+  
