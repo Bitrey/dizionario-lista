@@ -4,7 +4,9 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Parola = require("./models/definizione");
 
-mongoose.connect("mongodb://localhost:27017/dizionario", { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true }, function(){
+    console.log("Database collegato!");
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
@@ -35,7 +37,7 @@ app.get("*", function(req, res){
     res.render("404");
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, function () {
+// var port = process.env.PORT || 3000;
+app.listen(process.env.PORT, process.env.IP, function () {
     console.log("Server Started");
 });
