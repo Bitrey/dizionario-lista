@@ -16,4 +16,18 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand mx-auto" href="/">Dizionario della 3^C</a>
+        
     </nav>
+    <div class="container">
+        
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0){ %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
+        </div>

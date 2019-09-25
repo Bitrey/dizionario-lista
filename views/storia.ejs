@@ -3,81 +3,23 @@
 <div class="container mt-5">
     <div class="row">
 
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+        <% parole.forEach(function(parola){ %>
+        <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
+                    <h5 id="<%= parola._id %>" class="card-title text-center"><%= parola.parola %></h5>
                     <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="text-center card-text"><%= parola.significato %></p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Parola</h5>
-                    <hr class="my-4">
-                    <p class="text-center card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
+        <% }); %>
         
     </div>
 </div>
 
+<div class="mb-1 text-right m-3">
+    <a href="/storia/nuovo" class="btn btn-primary btn-sm" role="button">Nuovo</a>
+</div>
 
 <% include ./partials/footer %>
